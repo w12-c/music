@@ -23,22 +23,6 @@ var musicData = [
         duration: "04:18",
         src: "mp3/富士山下 - 陈奕迅.mp3",
         cover: "img/2.jpg"
-    },
-    {
-        id: 4,
-        title: "可惜没如果",
-        author: "林俊杰",
-        duration: "04:58",
-        src: "mp3/可惜没如果 - 林俊杰.mp3",
-        cover: "img/3.jpg"
-    },
-    {
-        id: 5,
-        title: "多远都要在一起",
-        author: "邓紫棋",
-        duration: "03:37",
-        src: "mp3/G.E.M. 邓紫棋 - 多远都要在一起.mp3",
-        cover: "img/3.jpg"
     }
 ];
 
