@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器 - 青花瓷</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="audio-box">
+        <div class="audio-container">
+            <!-- 上部：唱片和音乐信息 -->
+            <div class="upper-container">
+                <div class="music-info">
+                    <h1 class="music-title" id="music-title">青花瓷</h1>
+                    <p class="author-name" id="author-name">周杰伦</p>
+                </div>
+                
+                <div class="record-container">
+                    <img src="img/3.jpg" alt="唱片封面" class="record-img" id="record-img">
+                    <div class="record-center"></div>
+                </div>
+            </div>
+            
+            <!-- 进度条 -->
+            <div class="a-progress">
+                <div class="progress-labels">
+                    <span class="played-time-label" id="playedTime">00:00</span>
+                    <span class="audio-time-label" id="audioTime">03:59</span>
+                </div>
+                <div class="pgs-total" id="progress-total">
+                    <div class="pgs-play" id="progress"></div>
+                </div>
+            </div>
+            
+            <!-- 控制按钮 -->
+            <div class="controls">
+                <div class="center-bottom-container">
+                    <button class="control-btn icon-btn" id="prev-btn">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    
+                    <button class="control-btn play-pause-btn" id="pause">
+                        <i class="fas fa-play" id="play-icon"></i>
+                    </button>
+                    
+                    <button class="control-btn icon-btn" id="next-btn">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                </div>
+            </div>
+            
+            
+            <!-- 播放列表 -->
+            <div class="music-list-container">
+                <div class="list-header">
+                    <h3 class="list-title">
+                        <i class="fas fa-list-music"></i> 播放列表
+                    </h3>
+                    <button class="close-list" id="close-list">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                </div>
+                
+                <ul class="music-list" id="music-list">
+                    <!-- 音乐列表将通过JS动态生成 -->
+                </ul>
+            </div>
+            
+            <!-- 音频元素 -->
+            <audio id="audioTag" preload="metadata"></audio>
+        </div>
+        
+        <footer>
+            <p>25216950303 陈小薇</p>
+        </footer>
+    </div>
 
+    <script src="js/audio.js"></script>
+</body>
+</html>
