@@ -1,1 +1,153 @@
+/* audio.css - 音频播放器专用样式 */
 
+/* 播放/暂停图标样式 */
+.icon-play, .icon-pause {
+    display: inline-block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 播放图标 */
+.icon-play {
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/继续播放.png');
+}
+
+/* 暂停图标 */
+.icon-pause {
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/暂停.png');
+}
+
+/* 音频控制面板样式 */
+.audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.audio-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.audio-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.volume-slider {
+    width: 80px;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #9d50bb;
+    cursor: pointer;
+}
+
+.playback-rate {
+    margin-left: 20px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+/* 当前播放指示器 */
+.current-playing-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: rgba(157, 80, 187, 0.2);
+    border-radius: 20px;
+    font-size: 14px;
+    color: #d0a8ff;
+}
+
+.current-playing-indicator i {
+    font-size: 12px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* 音频加载状态 */
+.audio-loading {
+    position: relative;
+}
+
+.audio-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #9d50bb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 音频错误状态 */
+.audio-error {
+    color: #ff6b6b;
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
